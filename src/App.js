@@ -22,10 +22,17 @@
 //   );
 // }
 
-const App = () => (
+const App = () =>{
+  const today = new Date()
+  const a = 10
+  const b = 20
+
+  console.log('Olá componente')
+ return (
   <div>
     <p>Hello, world!</p>
   </div>
-)
+  )
+}
 
 export default App
