@@ -27,10 +27,10 @@ const App = () =>{
   const a = 10
   const b = 20
 
-  console.log('Olá componente')
+  console.log(today, a + b)
  return (
   <div>
-    <p>Hello, world!</p>
+    <p>Hello, world! Today is {today.toString()}</p>
   </div>
   )
 }
