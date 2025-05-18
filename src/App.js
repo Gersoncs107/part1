@@ -22,16 +22,21 @@
 //   );
 // }
 
-const App = () =>{
-  const today = new Date()
-  const a = 10
-  const b = 20
+const Hello = () => {
+  return (
+    <div>
+      <p>Olá, mundo!</p>
+    </div>
+  )
+}
 
-  console.log(today, a + b)
- return (
-  <div>
-    <p>Hello, world! Today is {today.toString()}</p>
-  </div>
+const App = () => {
+  return (
+    <div>
+      <h1>Olá a todos!</h1>
+
+      <Hello />
+    </div>
   )
 }
 
