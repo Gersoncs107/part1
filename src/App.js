@@ -35,12 +35,12 @@ const App = () => {
   const name = 'Peter'
   const age = 30
   return (
-    <div>
+    <>
       <h1>Hello Everyone!</h1>
 
       <Hello name='George' age={10 + 30}/>
       <Hello name={name} age={age}/>
-    </div>
+    </>
   )
 }
 
