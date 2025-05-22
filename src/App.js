@@ -1,39 +1,27 @@
-// import logo from './logo.svg';
-// import './App.css';
+const App = () => {
+  const course = 'Desenvolvimento de aplicação Half Stack'
+  const part1 = 'Fundamentos da biblioteca React'
+  const exercises1 = 10
+  const part2 = 'Usando props para passar dados'
+  const exercises2 = 7
+  const part3 = 'Estado de um componente'
+  const exercises3 = 14
 
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-
-  const App = () => {
-    const amigos = [
-      {nome: 'George', idade: 25},
-      {nome:'Maria', idade: 30}
-    ]
-      return(
-      <>
-        <h1>{amigos[0].nome} {amigos[0].idade}</h1>
-        <h1>{amigos[1].nome} {amigos[1].idade}</h1>
-       </>
-      )
-    
-  }
+  return (
+    <div>
+      <h1>{course}</h1>
+      <p>
+        {part1} {exercises1}
+      </p>
+      <p>
+        {part2} {exercises2}
+      </p>
+      <p>
+        {part3} {exercises3}
+      </p>
+      <p>Number of exercises {exercises1 + exercises2 + exercises3}</p>
+    </div>
+  )
+}
 
 export default App
