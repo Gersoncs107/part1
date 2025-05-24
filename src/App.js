@@ -17,12 +17,18 @@ const Hello = ({nome, idade})=>{
 const App = () => {
   const [contador, setContador] = useState(0)
 
+  const aumentarContador = () => setContador(contador + 1)
+  const zerarContador = () => setContador(0)
+
 
   return(
     <div>
       <h1>{contador}</h1>
-      <button onClick={setContador(contador + 1)}>
+      <button onClick={aumentarContador}>
         Mais+
+      </button>
+      <button onClick={zerarContador}>
+        Zerar0
       </button>
     </div>
   )
