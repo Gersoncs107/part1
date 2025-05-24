@@ -1,3 +1,5 @@
+import { useState } from "react"
+
 const Hello = ({nome, idade})=>{
 
   const anoDenascimento = () => {
@@ -13,14 +15,16 @@ const Hello = ({nome, idade})=>{
 }
 
 const App = () => {
-  const nome = 'Peter'
-  const idade = 10
-  return (
+  const [contador, setContador] = useState(0)
+
+  setTimeout(
+    () => setContador(contador + 1),
+    1000
+  )
+
+  return(
     <div>
-      <h1>Olá a todos!</h1>
-      <Hello nome='Maya' idade={26 + 10}/>
-      <Hello nome={nome} idade={idade}/>
-      <Hello nome='Madruga' idade={120}/>
+      <h1>{contador}</h1>
     </div>
   )
 }
