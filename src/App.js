@@ -30,6 +30,7 @@ const App = () => {
   const [contador, setContador] = useState(0)
 
   const aumentarContador = () => setContador(contador + 1)
+  const diminuirContador = () => setContador(contador -1)
   const zerarContador = () => setContador(0)
 
 
@@ -38,6 +39,7 @@ const App = () => {
       <Exibir contador={contador}/>
      <Button onClick={aumentarContador} text='Mais+'/>
      <Button onClick={zerarContador} text='Zerar0'/>
+     <Button onClick={diminuirContador} text='Menos-'/>
     </div>
   )
 }
