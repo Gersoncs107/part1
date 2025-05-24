@@ -14,6 +14,18 @@ const Hello = ({nome, idade})=>{
   )
 }
 
+const Exibir = (props) => {
+  return <div><h1>{props.contador}</h1></div>
+}
+
+const Button = (props) => {
+  return(
+    <button onClick={props.onClick}>
+      {props.text}
+    </button>
+  )
+}
+
 const App = () => {
   const [contador, setContador] = useState(0)
 
@@ -23,13 +35,9 @@ const App = () => {
 
   return(
     <div>
-      <h1>{contador}</h1>
-      <button onClick={aumentarContador}>
-        Mais+
-      </button>
-      <button onClick={zerarContador}>
-        Zerar0
-      </button>
+      <Exibir contador={contador}/>
+     <Button onClick={aumentarContador} text='Mais+'/>
+     <Button onClick={zerarContador} text='Zerar0'/>
     </div>
   )
 }
