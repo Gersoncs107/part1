@@ -22,6 +22,7 @@ const App = () => {
     1000
   )
 
+  
   return(
     <div>
       <h1>{contador}</h1>
