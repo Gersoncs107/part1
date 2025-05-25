@@ -27,21 +27,36 @@ const Button = (props) => {
 }
 
 const App = () => {
-  const [contador, setContador] = useState(0)
+  const [ contador, setContador ] = useState(0)
 
-  const aumentarContador = () => setContador(contador + 1)
-  const diminuirContador = () => setContador(contador -1)
-  const zerarContador = () => setContador(0)
+  console.log('renderizando com o valor do contador em', contador)
 
+  const aumentarEmUm = () => {
 
-  return(
+    console.log('aumentando, valor anterior', contador)
+    setContador(contador + 1)
+  }
+
+  const diminuirEmUm = () => { 
+
+    console.log('diminuindo, valor anterior', contador)
+    setContador(contador - 1)
+  }
+
+  const zerarContador = () => {
+
+    console.log('zerando, valor anterior', contador)
+    setContador(0)
+  }
+
+  return (
     <div>
-      <Exibir contador={contador}/>
-     <Button onClick={aumentarContador} text='Mais+'/>
-     <Button onClick={zerarContador} text='Zerar0'/>
-     <Button onClick={diminuirContador} text='Menos-'/>
+      <Exibir contador={contador} />
+      <Botao handleClique={aumentarEmUm} texto="mais+" />
+      <Botao handleClique={zerarContador} texto="zerar" />
+      <Botao handleClique={diminuirEmUm} texto="menos-" />
     </div>
   )
-}
+} 
 
 export default App
