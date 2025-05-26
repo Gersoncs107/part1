@@ -31,6 +31,7 @@ const App = () => {
       {cliques.esquerda}
       <button onClick={handleCliqueEsquerda}>Esquerda</button>
       <button onClick={handleCliqueDireita}>Direita</button>
+      <p>{todosOsCliques.join(' ')}</p>
     </div>
   )
 }
