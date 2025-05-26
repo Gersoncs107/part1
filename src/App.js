@@ -15,15 +15,20 @@ const Button = ({onClick, text}) => {
 const App = () => {
   const [esquerda, setEsquerda] = useState(0)
   const [direita, setDireita] = useState(0)
+  const [todosOsCliques, setTodos] = useState([])
+
+  const handleCliqueEsquerda = () => {
+    setTodos(todosOsCliques.concat('E'))
+    setEsquerda(esquerda + 1)
+  }
 
   return (
     <div>
-      {esquerda}
-      <button onClick={()=> setEsquerda(esquerda + 1)}>Esquerda</button>
-      <button onClick={()=> setDireita(direita + 1)}>Direita</button>
-      {direita}
+      {cliques.esquerda}
+      <button onClick={handleCliqueEsquerda}>Esquerda</button>
+      <button onClick={handleCliqueDireita}>Direita</button>
     </div>
   )
-} 
+}
 
 export default App
