@@ -22,6 +22,10 @@ const App = () => {
     setEsquerda(esquerda + 1)
   }
 
+  const handleCliqueDireita =() => {
+    setDireita(direita + 1)
+  }
+
   return (
     <div>
       {cliques.esquerda}
