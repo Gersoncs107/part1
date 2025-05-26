@@ -13,34 +13,15 @@ const Button = ({onClick, text}) => {
 }
 
 const App = () => {
-  const [ contador, setContador ] = useState(0)
-
-  console.log('renderizando com o valor do contador em', contador)
-
-  const aumentarEmUm = () => {
-
-    console.log('aumentando, valor anterior', contador)
-    setContador(contador + 1)
-  }
-
-  const diminuirEmUm = () => { 
-
-    console.log('diminuindo, valor anterior', contador)
-    setContador(contador - 1)
-  }
-
-  const zerarContador = () => {
-
-    console.log('zerando, valor anterior', contador)
-    setContador(0)
-  }
+  const [esquerda, setEsquerda] = useState(0)
+  const [direita, setDireita] = useState(0)
 
   return (
     <div>
-      <Exibir contador={contador} />
-      <Button onClick={aumentarEmUm} text="mais+" />
-      <Button onClick={zerarContador} text="zerar" />
-      <Button onClick={diminuirEmUm} text="menos-" />
+      {esquerda}
+      <button onClick={()=> setEsquerda(esquerda + 1)}>Esquerda</button>
+      <button onClick={()=> setDireita(direita + 1)}>Direita</button>
+      {direita}
     </div>
   )
 } 
