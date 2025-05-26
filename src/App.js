@@ -19,12 +19,16 @@ const App = () => {
   const [total, setTotal] = useState(0)
 
   const handleCliqueEsquerda = () => {
+    const handleCliqueEsquerda = () => {
     setTodos(todosOsCliques.concat('E'))
-    setEsquerda(esquerda + 1)
-    setTotal(esquerda + direita)
+    const atualizaEsquerda = esquerda + 1
+    setEsquerda(atualizaEsquerda)
+    setTotal(atualizaEsquerda + direita)
+  }
   }
 
   const handleCliqueDireita =() => {
+    setTodos(todosOsCliques.concat('D'))
     setDireita(direita + 1)
     setTotal(esquerda + direita)
   }
@@ -36,6 +40,7 @@ const App = () => {
       <button onClick={handleCliqueDireita}>Direita</button>
       {direita}
       <p>{todosOsCliques.join(' ')}</p>
+      <p>Total {total}</p>
     </div>
   )
 }
