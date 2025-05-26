@@ -19,12 +19,10 @@ const App = () => {
   const [total, setTotal] = useState(0)
 
   const handleCliqueEsquerda = () => {
-    const handleCliqueEsquerda = () => {
     setTodos(todosOsCliques.concat('E'))
     const atualizaEsquerda = esquerda + 1
     setEsquerda(atualizaEsquerda)
     setTotal(atualizaEsquerda + direita)
-  }
   }
 
   const handleCliqueDireita =() => {
