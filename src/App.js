@@ -54,8 +54,7 @@ const App = () => {
       <button onClick={handleCliqueEsquerda}>Esquerda</button>
       <button onClick={handleCliqueDireita}>Direita</button>
       {direita}
-      <p>{todosOsCliques.join(' ')}</p>
-      <p>Total {total}</p>
+      <Historico todosOsCliques={todosOsCliques}/>
     </div>
   )
 }
