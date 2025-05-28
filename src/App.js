@@ -14,7 +14,7 @@ const Button = ({onClick, text}) => {
 
 const Historico = (props) => {
  
-  if( props.historico.Length === 0) {
+  if( props.todosOsCliques.length === 0) {
     return (
       <div>
         <p>Clique em um dos botões para usar a aplicação!</p>
@@ -51,8 +51,8 @@ const App = () => {
   return (
     <div>
       {esquerda}
-      <button onClick={handleCliqueEsquerda}>Esquerda</button>
-      <button onClick={handleCliqueDireita}>Direita</button>
+      <Button onClick={handleCliqueEsquerda} text={'EEsquerda'}/>
+      <Button onClick={handleCliqueDireita} text={'Direita'}/>
       {direita}
       <Historico todosOsCliques={todosOsCliques}/>
     </div>
