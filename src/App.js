@@ -12,6 +12,23 @@ const Button = ({onClick, text}) => {
   )
 }
 
+const Historico = (props) => {
+ 
+  if( props.historico.Length === 0) {
+    return (
+      <div>
+        <p>Clique em um dos botões para usar a aplicação!</p>
+      </div>
+    )
+  }
+
+  return(
+    <div>
+      Histórico de cliques:{props.todosOsCliques.join(' ')}
+    </div>
+  )
+}
+
 const App = () => {
   const [esquerda, setEsquerda] = useState(0)
   const [direita, setDireita] = useState(0)
