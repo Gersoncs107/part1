@@ -5,6 +5,7 @@ const Exibir = ({contador}) => {
 }
 
 const Button = ({onClick, text}) => {
+  console.log(onclick, text)
   return(
     <button onClick={onClick}>
       {text}
@@ -51,7 +52,7 @@ const App = () => {
   return (
     <div>
       {esquerda}
-      <Button onClick={handleCliqueEsquerda} text={'EEsquerda'}/>
+      <Button onClick={handleCliqueEsquerda} text={'Esquerda'}/>
       <Button onClick={handleCliqueDireita} text={'Direita'}/>
       {direita}
       <Historico todosOsCliques={todosOsCliques}/>
