@@ -1,8 +1,6 @@
 import { useState } from "react"
 
-const Exibir = ({contador}) => {
-  return <div><h1>{contador}</h1></div>
-}
+const Exibir = (props) => <div>{props.value}</div>
 
 const Button = (props) => {
   
@@ -33,13 +31,15 @@ const Historico = (props) => {
 const App = () => {
   
   const [value, setValue] = useState(10)
+
+  const setOnValue = (newValue) => {
+    console.log('Current value', newValue)
+    return setValue(newValue)
+  }
+
   return (
     <div>
-      {esquerda}
-      <Button onClick={handleCliqueEsquerda} text={'Esquerda'}/>
-      <Button onClick={handleCliqueDireita} text={'Direita'}/>
-      {direita}
-      <Historico todosOsCliques={todosOsCliques}/>
+      
     </div>
   )
 }
