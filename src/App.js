@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-const Exibir = (props) => <div>{props.value}</div>
+ const Exibir = (props) => <div>{props.value}</div>
 
 const Button = (props) => {
   
@@ -37,9 +37,13 @@ const App = () => {
     return setValue(newValue)
   }
 
+
   return (
     <div>
-      
+      <Exibir value={value}/>
+      <Button handleClick={() => setOnValue(1000)} text='Mil'/>   
+      <Button handleClick={() => setOnValue(0)} text='Zerar'/>   
+      <Button handleClick={() => setOnValue(value + 1)} text='Incrementar'/>   
     </div>
   )
 }
