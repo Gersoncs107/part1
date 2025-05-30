@@ -31,24 +31,8 @@ const Historico = (props) => {
 }
 
 const App = () => {
-  const [esquerda, setEsquerda] = useState(0)
-  const [direita, setDireita] = useState(0)
-  const [todosOsCliques, setTodos] = useState([])
-  const [total, setTotal] = useState(0)
-
-  const handleCliqueEsquerda = () => {
-    setTodos(todosOsCliques.concat('E'))
-    const atualizaEsquerda = esquerda + 1
-    setEsquerda(atualizaEsquerda)
-    setTotal(atualizaEsquerda + direita)
-  }
-
-  const handleCliqueDireita =() => {
-    setTodos(todosOsCliques.concat('D'))
-    setDireita(direita + 1)
-    setTotal(esquerda + direita)
-  }
-
+  
+  const [value, setValue] = useState(10)
   return (
     <div>
       {esquerda}
