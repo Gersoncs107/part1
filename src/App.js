@@ -4,11 +4,11 @@ const Exibir = ({contador}) => {
   return <div><h1>{contador}</h1></div>
 }
 
-const Button = ({onClick, text}) => {
-  console.log(onclick, text)
+const Button = (props) => {
+  
   return(
-    <button onClick={onClick}>
-      {text}
+    <button onClick={props.handleClick}>
+      {props.text}
     </button>
   )
 }
